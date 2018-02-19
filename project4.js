@@ -1,13 +1,13 @@
 /**
  *   @author Youngs, Wyatt (youngsw@ncmich.edu)
  *   @version 0.0.1
- *   @summary Assignment 3 :: created: 02/05/18
+ *   @summary Assignment 4 :: created: 02/05/18
  */
 //section 1
 "use strict";
 const PROMPT = require('readline-sync');
 const MAX_ATTEMPTS = 3;
-const MINIMUM_STARS = 1;
+const MINIMUM_STARS = 0;
 const MAXIMUM_STARS = 5;
 
 //section 2
@@ -47,7 +47,7 @@ function setNumbStars() {
     let attempts = 0;
     while (attempts < MAX_ATTEMPTS) {
         try {
-            let answer = Number(PROMPT.question("Enter the number of stars you're rating this movie (1-5) : "));
+            let answer = Number(PROMPT.question("Enter the number of stars you're rating this movie (0-5) : "));
             if(isNaN(answer)) {
                 throw "Not a number!";
             }
